@@ -185,9 +185,6 @@ def render(p):
 <footer class="ft"><div class="wrap">
 <p class="ft-logo">러브<em>DM</em></p>
 <p>대전 로테이션 소개팅 · 대전 직장인 소개팅 · 논산 소개팅</p>
-<p>상호 [상호명] · 대표 [대표자명] · 사업자등록번호 [000-00-00000]</p>
-<p>통신판매업 신고번호 [제0000-대전○○-0000호]</p>
-<p>주소 [대전광역시 ○○구 ○○로 00] · 문의 [카카오톡 채널] · [연락처]</p>
 </div></footer>
 {events.bar(EVENTS, "/#schedule")}
 <script src="/assets/live.js" defer></script>
