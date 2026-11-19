@@ -1,0 +1,17 @@
+/* 모바일 하단 신청 바. 홈과 서브페이지가 함께 쓴다. */
+[hidden]{display:none!important}
+.mbar{display:none}
+@media (max-width:640px){
+  body{padding-bottom:86px}
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid #F0E6EA;box-shadow:0 -10px 30px rgba(24,20,28,.08);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transition:transform .3s cubic-bezier(.2,.8,.2,1);font-family:'Noto Sans KR',system-ui,sans-serif}
+  .mbar.off{transform:translateY(120%)}
+  .mbar-in{display:flex;align-items:center;gap:8px}
+  .mbar-tx{flex:1;min-width:0}
+  .mbar-tx p{margin:0;line-height:1.35}
+  .mbar-tx b{display:block;font-size:15px;font-weight:700;color:#18141C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mbar-tx span{display:block;font-size:13px;font-weight:700;color:#C81E5B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mbar a{flex:none;text-decoration:none;font-weight:700;font-size:15px;border-radius:999px;padding:12px 20px;transition:transform .12s ease,box-shadow .2s ease,background .2s ease}
+  .mbar a.go{background:linear-gradient(135deg,#D42A66 0%,#B81852 100%);color:#FFFFFF;box-shadow:0 6px 16px rgba(200,30,91,.32)}
+  .mbar a.kk{background:#FEE500;color:#191919;padding:12px 14px}
+  .mbar a:active{transform:scale(.95);box-shadow:0 2px 6px rgba(200,30,91,.25)}
+}

@@ -1,0 +1,97 @@
+/* 러브DM 서브페이지 공통 스타일. 색과 글꼴은 홈(index.html)과 같다. 움직임과 고급 톤은 assets/fx.css. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;font-family:'Noto Sans KR',system-ui,sans-serif;color:#18141C;line-height:1.7;word-break:keep-all}
+a{color:#C81E5B}a:hover{color:#9C1546}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;text-decoration:none;border-radius:999px;font-weight:700;background:#C81E5B;color:#FFFFFF;padding:14px 28px;font-size:16px}
+.btn:hover{background:#9C1546;color:#FFFFFF}
+.btn.ghost{background:#FFFFFF;color:#18141C;border:1.5px solid #18141C;padding:12.5px 26px}
+.btn.ghost:hover{background:#18141C;color:#FFFFFF}
+.btn.light{background:#FFFFFF;color:#C81E5B}
+.btn.light:hover{background:#FFE3EC;color:#9C1546}
+
+/* 헤더 */
+.hd{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid #F0E6EA}
+.hd-in{max-width:1200px;padding:12px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:#18141C;font-weight:900;font-size:23px;letter-spacing:-.5px}
+.logo em,.ft-logo em{font-style:normal;color:#C81E5B}
+.hd nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:15px;font-weight:500}
+.hd nav a{color:#3B3440;text-decoration:none}
+.hd nav a.btn{color:#FFFFFF;padding:10px 20px;font-size:15px}
+
+/* 첫 화면 */
+.hero{background:#FFF1F5;padding:40px 0 56px}
+.crumb{display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#6B6170;margin-bottom:28px}
+.crumb a{color:#6B6170;text-decoration:none}.crumb a:hover{color:#C81E5B}
+.crumb [aria-current]{color:#18141C;font-weight:500}
+.pill{margin:0 0 16px;display:inline-block;background:#FFFFFF;color:#9C1546;font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;border:1px solid #F5C9D7}
+.hero h1{margin:0;font-weight:900;font-size:clamp(34px,5vw,56px);line-height:1.2;letter-spacing:-1.2px;overflow-wrap:anywhere}
+.lead{margin:20px 0 0;font-size:18px;color:#4A4250;max-width:720px}
+.cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.upd{margin:22px 0 0;font-size:13px;color:#857A8A}
+
+/* 목차 */
+.toc{position:sticky;top:57px;z-index:5;background:#FFFFFF;border-bottom:1px solid #F0E6EA}
+.toc .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc a{flex:none;font-size:14px;color:#3B3440;text-decoration:none;padding:6px 12px;border-radius:999px;background:#F8F3F5}
+.toc a:hover{background:#FFE3EC;color:#9C1546}
+
+/* 본문 */
+.body{padding-top:48px;padding-bottom:72px}
+.body section{scroll-margin-top:120px}
+.body h2{margin:0 0 18px;font-size:clamp(24px,3vw,30px);font-weight:900;letter-spacing:-.6px;line-height:1.35}
+.body h3{margin:28px 0 12px;font-size:17px;font-weight:700;color:#4A4250}
+.sec{margin-top:56px}
+.sec p{margin:0 0 16px;font-size:17px;color:#2E2733}
+.pts{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:12px;counter-reset:n}
+.pts li{display:grid;gap:4px;padding:18px 20px;background:#FFFFFF;border:1px solid #F0E6EA;border-radius:14px}
+.pts b{font-size:17px}
+.pts span{color:#4A4250;font-size:16px}
+ol.pts li{position:relative;padding-left:62px}
+ol.pts li::before{counter-increment:n;content:counter(n,decimal-leading-zero);position:absolute;left:20px;top:19px;font-weight:900;color:#C81E5B;font-size:16px}
+
+.key{background:#18141C;color:#FFFFFF;border-radius:20px;padding:30px 30px 14px}
+.key h2{color:#FFFFFF}
+.key dl,.info dl{margin:0}
+.key dl div,.info dl div{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(255,255,255,.14)}
+.key dt{font-weight:700;color:#F5C9D7}
+.key dd,.info dd{margin:0}
+
+.info{margin-top:56px;background:#FFF1F5;border-radius:20px;padding:30px}
+.info dl div{border-top-color:#F5C9D7}
+.info dt{font-weight:700;color:#9C1546}
+.info p{margin:18px 0 22px;color:#4A4250}
+
+.faq{margin-top:56px}
+.faq details{background:#FFFFFF;border:1px solid #F0E6EA;border-radius:16px;margin-bottom:10px}
+.faq summary{list-style:none;cursor:pointer;min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;font-size:17px;font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-size:22px;color:#C81E5B;font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0;padding:0 22px 20px;color:#4A4250;font-size:16px}
+
+.more{margin-top:56px}
+.lks{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.lk{display:block;padding:14px 16px;border:1px solid #F0E6EA;border-radius:12px;text-decoration:none;color:#18141C;font-weight:500;font-size:15px}
+a.lk:hover{border-color:#C81E5B;color:#C81E5B}
+.lk.on{background:#18141C;color:#FFFFFF;border-color:#18141C}
+
+/* 하단 */
+.band{background:#C81E5B;color:#FFFFFF;text-align:center;padding:64px 0}
+.band h2{margin:0;font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:-.6px}
+.band p{margin:14px auto 26px;max-width:620px;color:#FFE3EC}
+.ft{background:#18141C;color:#CFC6D3;padding:40px 0;font-size:14px}
+.ft p{margin:0 0 4px}
+.ft-logo{font-weight:900;font-size:20px;color:#FFFFFF;margin-bottom:10px!important}
+
+@media (max-width:640px){
+  .hero{padding:28px 0 44px}
+  .lead{font-size:16px}
+  .toc{top:0;position:relative}
+  .key,.info{padding:24px 20px 10px}
+  .key dl div,.info dl div{grid-template-columns:1fr;gap:2px}
+  .sec p{font-size:16px}
+  .hd nav{gap:4px 14px;font-size:14px}
+}
